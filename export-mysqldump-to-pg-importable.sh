@@ -93,6 +93,7 @@ sed $inline_flag -- "s/int(11)/integer/g" "$target_pg_file"
 sed $inline_flag -- "s/tinyint(1)/boolean/g" "$target_pg_file"
 sed $inline_flag -- "s/mediumtext/text/g" "$target_pg_file"
 sed $inline_flag -- "s/datetime/timestamp/g" "$target_pg_file"
+sed $inline_flag -- "s/biginteger/integer/g" "$target_pg_file" # handles side effect of bigint(11)
 
 # replace problematic values
 sed $inline_flag -- "s/\'0000-00-00 00:00:00\'/NULL/g" "$target_pg_file"

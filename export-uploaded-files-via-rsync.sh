@@ -79,7 +79,7 @@ do
         if [ ! -d "$subdir" ]; then
             echo "skipping $subdir, not present"
         else
-            rsync -avzh $exclude_args $subdir "$RSYNC_TARGET_PATH/$WORKING_DIR/"
+            rsync -avzh --copy-links $exclude_args $subdir "$RSYNC_TARGET_PATH/$WORKING_DIR/"
         fi
     done
 

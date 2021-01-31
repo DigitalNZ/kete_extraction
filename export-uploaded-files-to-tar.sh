@@ -81,7 +81,7 @@ do
 
         echo "creating tar file for $top"
 
-        tar czf $command_args
+        tar czfh $command_args
 
         echo "done creating tar file"
 
